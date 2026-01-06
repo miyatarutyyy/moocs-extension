@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "INIAD MOOCs MyStyle",
+    "version": "1.0.0",
+    "description": "Change moocs.iniad.org to my style",
+    "content_scripts": [
+	{
+	    "matches": [
+		"*://moocs.iniad.org/*",
+		"*://*.moocs.iniad.org/*"
+	    ],
+	    "css": ["mystyle.css"],
+	    "run_at": "document_start",
+	    "all_frames": true
+	}
+    ]
+}

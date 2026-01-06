@@ -1,0 +1,152 @@
+html, body, .wrapper, .content-wrapper, .content, .main-footer{
+  background: #000 ;
+  color: rgb(246, 110, 37)
+}
+
+.well,
+.box, .box-body, .box-header,
+.content-wrapper section,
+.content-wrapper .container-fluid {
+  background-color: #000000;
+  background-image: none;
+  border-color: #000000;
+  color: rgb(246, 110, 37)
+}
+
+.well .media-heading {
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.main-header .navbar,
+.main-sidebar, .sidebar, .sidebar-menu {
+  background-color: #000 !important;
+  background-image: none !important;
+}
+
+.main-header .navbar .sidebar-toggle {
+  color: #00FFFF !important;
+}
+.main-header .navbar .sidebar-toggle:hover,
+.main-header .navbar .sidebar-toggle:focus {
+  color: #00FFFF !important;
+  background: rgba(0, 255, 255, 0.12) !important;
+}
+.main-header .navbar .sidebar-toggle:before {
+  color: inherit !important;
+}
+
+.main-header .navbar .navbar-custom-menu .user-menu > a,
+.main-header .navbar .navbar-custom-menu .user-menu > a .hidden-xs {
+  color: #000000 !important; 
+}
+
+
+
+.main-sidebar .sidebar-menu > li > a,
+.main-sidebar .sidebar-menu > li > a .fa,
+.main-sidebar .sidebar-menu > li > a .sidebar-menu-test {
+  color: rgb(246, 110, 37) !important
+}
+/* header（SHORTCUT / TABLE OF CONTENTS）の文字色 */
+.main-sidebar .sidebar-menu > li.header {
+  color: rgb(246, 110, 37) !important;
+  background: transparent !important;
+}
+/* hover で背景オレンジ＋文字黒（最重要） */
+.main-sidebar .sidebar-menu > li:hover > a,
+.main-sidebar .sidebar-menu > li > a:hover,
+.main-sidebar .sidebar-menu > li.active > a {
+  background: rgb(246, 110, 37) !important; /* オレンジ背景 */
+  color: #000 !important;                  /* 文字は黒 */
+}
+/* hover/active 時のアイコンも黒に揃える */
+.main-sidebar .sidebar-menu > li:hover > a .fa,
+.main-sidebar .sidebar-menu > li.active > a .fa {
+  color: #000 !important;
+}
+/* 子メニュー（treeview-menu）の背景（普段） */
+.main-sidebar .sidebar-menu .treeview-menu {
+  background: #000 !important;
+}
+/* 子メニュー hover / active */
+.main-sidebar .sidebar-menu .treeview-menu > li > a:hover,
+.main-sidebar .sidebar-menu .treeview-menu > li.active > a {
+  background: rgb(246, 110, 37) !important;
+  color: #000 !important;
+}
+/* 子メニューの文字色（普段） */
+.main-sidebar .sidebar-menu .treeview-menu > li > a {
+  color: rgb(246, 110, 37) !important;
+}
+
+
+
+/* List of Courses の下の帯 */
+/* 黒くする */
+.content-wrapper .content-header .breadcrumb {
+  background-color: transparent !important;
+  color: #000000;
+}
+.content-wrapper .content-header .breadcrumb > li.active {
+  background-color: transparent;
+  color: #000000;
+}
+
+
+
+/* 左上ロゴ枠（白い四角の背景）を黒へ */
+.main-header .logo,
+.main-header .logo:hover,
+.main-header .logo:focus {
+  background-color: #000 !important;
+  background-image: none !important;
+  border-right: 1px solid #111 !important;
+}
+
+/* 仕切り線（縦棒）を白→黒へ */
+/* 左：ロゴ枠とナビの境 */
+/* ≡（sidebar-toggle）まわりの縦棒を消す */
+.main-header .navbar .sidebar-toggle,
+.main-header .navbar .sidebar-toggle:hover,
+.main-header .navbar .sidebar-toggle:focus {
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+}
+/* 右：上部バー右端の縦線（navbar あるいは custom-menu 側の border が犯人になりがち） */
+.main-header .navbar,
+.main-header .navbar-custom-menu,
+.main-header .navbar-custom-menu > .navbar-nav > li > a {
+  border-left-color: #000 !important;
+  border-right-color: #000 !important;
+}
+
+
+
+/* リンクのスタイル設定 */
+a:link { color: #00FFFF }
+a:visited { color: #00FFFF }
+
+a.btn.btn-primary {
+  background: transparent !important;
+  color: #00FFFF !important;
+  border: 1px solid #00FFFF !important;
+}
+a.btn.btn-primary:hover,
+a.btn.btn-primary:focus {
+  background: #00FFFF !important;
+  color: #000 !important;
+  border-color: #00FFFF !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+a.btn.btn-primary:focus-visible {
+  outline: 2px solid rgba(0, 255, 255, 0.5) !important;
+  outline-offset: 2px !important;
+}
+a.btn.btn-primary .fa {
+  color: inherit !important;
+}
+
