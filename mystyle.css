@@ -125,6 +125,313 @@ html, body, .wrapper, .content-wrapper, .content, .main-footer{
 
 
 
+/* =========================================
+   ページネーション（.pagination.pagination-lg）
+   通常: 黒背景 / オレンジ枠 / オレンジ文字
+   active: オレンジ背景&枠 / 黒文字
+   ========================================= */
+
+/* 枠線・背景（全体は透明でもOKだが、リンク側を黒に統一） */
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #000 !important;
+  border-color: #ff7a00 !important;
+  color: #ff7a00 !important;
+}
+
+/* hover（任意：押しやすさのため active と同じに） */
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  background-color: #ff7a00 !important;
+  border-color: #ff7a00 !important;
+  color: #000 !important;
+}
+
+/* 現在ページ（active） */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #ff7a00 !important;
+  border-color: #ff7a00 !important;
+  color: #000 !important;
+}
+
+/* disabled（無効）も通常に寄せる：見た目だけ統一 */
+.pagination > .disabled > a,
+.pagination > .disabled > span,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > span:focus {
+  background-color: #000 !important;
+  border-color: #ff7a00 !important;
+  color: #ff7a00 !important;
+  opacity: 1 !important; /* 透過させない */
+}
+
+
+
+
+/* ================================
+   INIAD MOOCs: problem container
+   ================================ */
+
+/* 外枠の panel 自体が白いので、まずここを潰す */
+.panel.pad-form.problem-container,
+.pad-block,
+.pad-block > .panel,
+.problem-container {
+  background: #000 !important;
+  background-image: none !important;
+  color: rgb(246, 110, 37) !important;
+  border-color: #000 !important;
+}
+
+/* panel の中身（Bootstrap既定の白を完全に上書き） */
+.problem-container .panel-body,
+.problem-container .panel-heading {
+  background: #000 !important;
+  background-image: none !important;
+  color: rgb(246, 110, 37) !important;
+  border-color: #000 !important;
+}
+
+/* 問題の各ページ（JSで表示切替される） */
+.problem-container .problem-spinner,
+.problem-container .problem-coverpage,
+.problem-container .problem-contentpage,
+.problem-container .problem-description,
+.problem-container .problem-contents,
+.problem-container .problem-assessment {
+  background: #000 !important;
+  background-image: none !important;
+  color: rgb(246, 110, 37) !important;
+  border-color: #000 !important;
+}
+
+/* 「現在回答を受け付けていません」など（alert-warning の黄背景を潰す） */
+.problem-container .alert.alert-warning,
+.problem-container .alert.problem-closed-only,
+.problem-container .problem-closed-only {
+  background: #000 !important;
+  background-image: none !important;
+  color: rgb(246, 110, 37) !important;
+  border-color: rgb(246, 110, 37) !important;
+}
+
+/* 採点結果の「panel-primary」が青くなるのを潰す */
+.problem-container .panel.panel-primary,
+.problem-container .panel.panel-primary > .panel-heading,
+.problem-container .panel.panel-primary > .panel-body {
+  background: #000 !important;
+  color: rgb(246, 110, 37) !important;
+  border-color: rgb(246, 110, 37) !important;
+}
+
+/* 入力欄（disabled時に灰色になるのを潰す） */
+.problem-container .form-control,
+.problem-container textarea.form-control,
+.problem-container input.form-control {
+  background: #000 !important;
+  color: rgb(246, 110, 37) !important;
+  border: 1px solid rgb(246, 110, 37) !important;
+}
+.problem-container .form-control:disabled,
+.problem-container .form-control[disabled],
+.problem-container textarea:disabled,
+.problem-container input:disabled {
+  background: #000 !important;
+  color: rgb(246, 110, 37) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: rgb(246, 110, 37) !important;
+}
+
+
+
+/* Bookmark ボタン（btn-default）を黒＋シアン枠に */
+#bookmark-toggle.btn.btn-default,
+a#bookmark-toggle.btn.btn-default {
+  background: #000 !important;
+  color: #00FFFF !important;
+  border: 1px solid #00FFFF !important;
+}
+
+/* アイコンも文字色に追随 */
+#bookmark-toggle.btn.btn-default .fa {
+  color: inherit !important;
+}
+
+/* hover / focus */
+#bookmark-toggle.btn.btn-default:hover,
+#bookmark-toggle.btn.btn-default:focus {
+  background: #00FFFF !important;
+  color: #000 !important;
+  border-color: #00FFFF !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* クリック後などで active になる場合も同様に */
+#bookmark-toggle.btn.btn-default:active,
+#bookmark-toggle.btn.btn-default.active {
+  background: #00FFFF !important;
+  color: #000 !important;
+  border-color: #00FFFF !important;
+}
+
+
+
+/* ================================
+   Pager（Previous / Next）を Bookmark と同じ見た目に
+   ================================ */
+
+/* 通常リンク */
+ul.pager li > a,
+ul.pager li > span {
+  background: #000 !important;
+  color: #00FFFF !important;
+  border: 1px solid #00FFFF !important;
+}
+
+/* hover / focus で反転 */
+ul.pager li > a:hover,
+ul.pager li > a:focus {
+  background: #00FFFF !important;
+  color: #000 !important;
+  border-color: #00FFFF !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* disabled（押せない側） */
+ul.pager li.disabled > a,
+ul.pager li.disabled > a:hover,
+ul.pager li.disabled > a:focus,
+ul.pager li.disabled > span {
+  background: #000 !important;
+  color: rgba(0, 255, 255, 0.45) !important; /* 無効感だけ出す */
+  border-color: rgba(0, 255, 255, 0.45) !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important; /* Bootstrap の薄さを固定 */
+}
+/* Pager: 角丸なし + 透明度なし（常に不透明） */
+ul.pager li > a,
+ul.pager li > span,
+ul.pager li.disabled > a,
+ul.pager li.disabled > span {
+  border-radius: 0 !important;
+  opacity: 1 !important;
+}
+
+/* disabled も透過させない（色で無効感だけ出す） */
+ul.pager li.disabled > a,
+ul.pager li.disabled > a:hover,
+ul.pager li.disabled > a:focus,
+ul.pager li.disabled > span {
+  opacity: 1 !important;          
+  cursor: not-allowed !important;
+}
+
+
+
+/* ================================
+   横線（hr）を好きな色に
+   ================================ */
+hr {
+  border: 0 !important;
+  border-top: 1px solid rgb(246, 110, 37) !important; /* ←ここを好きな色に */
+  background: none !important;
+  height: 0 !important;
+  opacity: 1 !important;
+}
+
+/* 問題ページ内の hr を念押し（JS注入でも勝つように） */
+.problem-container hr,
+.content-wrapper hr {
+  border-top-color: rgb(246, 110, 37) !important;     /* ←ここも同じ色に */
+}
+
+/* ================================
+   フッター上の横線（hr ではなく border のことが多い）
+   ================================ */
+.main-footer {
+  border-top: 1px solid rgb(246, 110, 37) !important; /* ←ここを好きな色に */
+}
+
+
+
+/* ==========
+   提出ボタン（submit-answer）
+   ========== */
+
+/* 通常: 黒背景 + オレンジ枠 + オレンジ文字 */
+button.submit-answer.btn,
+button.submit-answer.btn-success,
+.submit-answer.btn,
+.submit-answer.btn-success {
+  background-color: #000 !important;
+  border: 1px solid #ff7a00 !important;
+  color: #ff7a00 !important;
+}
+
+/* アイコンもオレンジに揃える（通常） */
+.submit-answer.btn i,
+.submit-answer.btn-success i {
+  color: #ff7a00 !important;
+}
+
+/* hover: オレンジ背景 + オレンジ枠 + 黒文字 */
+button.submit-answer.btn:hover,
+button.submit-answer.btn-success:hover,
+.submit-answer.btn:hover,
+.submit-answer.btn-success:hover,
+button.submit-answer.btn:focus,
+button.submit-answer.btn-success:focus,
+.submit-answer.btn:focus,
+.submit-answer.btn-success:focus {
+  background-color: #ff7a00 !important;
+  border-color: #ff7a00 !important;
+  color: #000 !important;
+}
+
+/* hover/focus 時のアイコンも黒 */
+button.submit-answer.btn:hover i,
+button.submit-answer.btn-success:hover i,
+.submit-answer.btn:hover i,
+.submit-answer.btn-success:hover i,
+button.submit-answer.btn:focus i,
+button.submit-answer.btn-success:focus i,
+.submit-answer.btn:focus i,
+.submit-answer.btn-success:focus i {
+  color: #000 !important;
+}
+
+/* active（押下中）: 通常状態に戻す */
+button.submit-answer.btn:active,
+button.submit-answer.btn-success:active,
+.submit-answer.btn:active,
+.submit-answer.btn-success:active {
+  background-color: #000 !important;
+  border-color: #ff7a00 !important;
+  color: #ff7a00 !important;
+}
+
+/* active時アイコンもオレンジ */
+button.submit-answer.btn:active i,
+button.submit-answer.btn-success:active i,
+.submit-answer.btn:active i,
+.submit-answer.btn-success:active i {
+  color: #ff7a00 !important;
+}
+
+
+
+
 /* リンクのスタイル設定 */
 a:link { color: #00FFFF }
 a:visited { color: #00FFFF }
